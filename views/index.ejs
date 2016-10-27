@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="restaurantsapp">
+
+<head>
+  <title>Unique Eats</title>
+  <meta charset="utf-8">
+  <base href="/" />
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/ngApp/css/site.css"/>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwBD4A3FiRJeinZoWJRyc_zmRVNJzkqQw&libraries=places"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+
+  </head>
+  <body>
+  <style>
+#navbar {
+
+}
+html{
+
+}
+
+.navbar {
+      background-color: black;
+  border: 0;
+}
+body {
+  background-image: url("https://s-media-cache-ak0.pinimg.com/originals/c4/9b/68/c49b68ad5a1f11cc7dc1827b31c0a663.jpg");
+  background-color: #f8f8f8;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: scroll;
+}
+  </style>
+    <nav id="navbar"class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Unique Eats</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="/login">| Login |</a></li>
+          <li><a href="/signup">| Register |</a></li>
+          <li><a href="/logout">| Logout |</a></li>
+
+        </ul>
+      </div>
+    </nav>
+  <hr />
+
+  <ui-view></ui-view>
+</div>
+
+
+  <script src="/bower_components/angular/angular.min.js"></script>
+  <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="/bower_components/angular-resource/angular-resource.min.js"></script>
+  <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="/bower_components/angular-touch/angular-touch.min.js"></script>
+  <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+  <script src="/ngApp/app.js"></script>
+  <script src="/ngApp/controllers/controllers.js"></script>
+  <script src="/ngApp/services/services.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<h1>My Admin Dashboard</h1>
+
+<div class="col-md-7" align="center">
+    <table  id="restTable" class="table table-sm">
+        <thead>
+            <tr>
+                <th>Users</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="data" ng-repeat="user in controller.users">
+                <td>{{user.username}}</td>
+                <td id="delete"><a href="#" ng-click="controller.remove(user._id)">Delete</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<style>
+    @import 'https://fonts.googleapis.com/css?family=Nothing+You+Could+Do';
+    @import 'https://fonts.googleapis.com/css?family=Audiowide';
+
+    h1 {
+        font-family: 'Audiowide', cursive;
+        font-weight: bolder;
+        font-size: 75px;
+        color: white;
+    }
+    #restTable {
+        font-family: 'Audiowide', cursive;
+        font-size: 24px;
+        font-weight: bolder;
+        color: white;
+        background-color: transparent;;
+        width: 50%;
+        margin-right: 200px;
+
+    }
+    #data {
+        font-family: 'Audiowide', cursive;
+        font-size: 20px;
+        font-weight: bolder;
+        color: white;
+
+    }
+    #delete {
+        font-size: 12px;
+        color: white;
+
+    }
+    a:link, a:visited, a:active {
+        color: white;
+        text-decoration: none;
+    }
+    </style>
+
+</style>

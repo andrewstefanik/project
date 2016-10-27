@@ -1,0 +1,121 @@
+<div id="scroll">
+    <h2 align="center">What's Unique</h2>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-7" align="right">
+            <table  id="restTable" class="table table-sm">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>City</th>
+                        <th>Comments</th>
+                        <th>Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="data" ng-repeat="restaurant in controller.restaurants | orderBy : 'restaurantName'">
+                        <td>{{restaurant.restaurantName}}</td>
+                        <td>{{restaurant.city}}</td>
+                        <td>{{restaurant.comments}}</td>
+                        <td>{{restaurant.rating}}</td>
+                        <td id="edit"><a href="/edit/{{restaurant._id}}">Edit</a></td>
+                        <td id="delete"><a href="#" ng-click="controller.remove(restaurant._id)">Delete</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-5" align="left">
+            <div id="complete-form">
+                <form ng-submit="controller.save()">
+                    <div class="form-group">
+
+                        <input style= "width: 250px;" ng-model="controller.restaurant.restaurantName" class="form-control" placeholder="Restaurant Name" />
+                    </div>
+                    <div class="form-group">
+
+                        <input style= "width: 250px;" ng-model="controller.restaurant.city" class="form-control" placeholder="City"/>
+                    </div>
+                    <div class="form-group">
+
+                        <input style= "width: 250px;" ng-model="controller.restaurant.comments" class="form-control" placeholder="What's Unique?"/>
+                    </div>
+                    <div class="form-group">
+
+                        <input style= "width: 250px;" ng-model="controller.restaurant.rating" class="form-control" placeholder="Rating 1-5"/>
+                    </div>
+                    <button class="btn btn-success btn-sm">Save Restaurant</button>
+                </form>
+                <br>
+                <br>
+                <ul class="bg-danger">
+                    <li ng-repeat="error in controller.validationErrors">
+                        {{error.message}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div align="center">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26633.227095181173!2d-111.92243979999999!3d33.44531009999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1476664526807" width="800" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+</div>
+<style>
+@import 'https://fonts.googleapis.com/css?family=Nothing+You+Could+Do';
+@import 'https://fonts.googleapis.com/css?family=Audiowide';
+
+
+h2 {
+    font-family: 'Audiowide', cursive;
+    font-weight: bolder;
+    font-size: 75px;
+    color: white;
+}
+#restTable {
+    font-family: 'Audiowide', cursive;
+    font-size: 24px;
+    font-weight: bolder;
+    color: white;
+    background-color: transparent;;
+    width: 50%;
+    margin-right: 200px;
+
+}
+#data {
+    font-family: 'Audiowide', cursive;
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+
+}
+#complete-form {
+    text-align:center;
+    display: inline-block;
+    font-family: 'Audiowide', cursive;
+}
+.form-control {
+    text-align:center;
+    display: inline-block;
+}
+button {
+    font-family: 'Audiowide', cursive;
+
+}
+#edit {
+    font-size: 14px;
+    color: white;
+}
+#delete {
+    font-size: 12px;
+    color: white;
+}
+#scroll {
+    overflow: scroll;
+}
+a:link, a:visited, a:active {
+    color: white;
+    text-decoration: none;
+}
+</style>
