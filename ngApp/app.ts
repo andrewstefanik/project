@@ -12,7 +12,7 @@ namespace restaurantsapp {
               templateUrl: '/ngApp/views/mainHome.html',
             })
             .state('admin', {
-              url: '/adminHome',
+              url: '/admin',
               templateUrl: '/ngApp/views/adminHome.html',
               controller: restaurantsapp.Controllers.UserController,
               controllerAs: 'controller'

@@ -149,11 +149,11 @@ app.post('/login', function(request, response) {
         response.redirect('/mainHome');
     });
 
-    app.get('/admin', function(request, response) {
+    app.get('/admins', function(request, response) {
         var user = request.session.user;
 
         if (user && user.admin) {
-            response.redirect('/adminHome');
+            response.redirect('/admin');
         }
         else {
             response.redirect('/error');
