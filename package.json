@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "postinstall": "bower install"
   },
   "dependencies": {
     "@types/angular": "^1.5.13",
@@ -21,6 +22,7 @@
     "@types/morgan": "^1.7.31",
     "@types/serve-favicon": "^2.2.27",
     "body-parser": "~1.15.1",
+    "bower": "^1.8.0",
     "cookie-parser": "~1.4.3",
     "debug": "~2.2.0",
     "ejs": "~2.4.1",
